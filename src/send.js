@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FloatWindow from './FloatWindow.js'
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -12,27 +14,31 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 }));
-Change_Buttonstate = () => {
-    this.setState
-}
-export default class SendBox extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            pushed_button: false
-            
-        }
-    }
-    render() {
-        const classes = useStyles();
-        return (
-            <div>
-                <form className={classes.root} noValidate autoComplete="off">
-                    <TextField id="standard-basic" label="send text" />
-                </form>
-                <Button variant="outlined" onClick={}>Default</Button>
-            </div>
 
-        )
-    }
+
+
+
+export default function RecieveBox() {
+
+    const [is_pushed, setPush] = React.useState(false);
+    const classes = useStyles();
+    const onclick_send = () => {
+        setPush(true);
+    };
+    const popup_floatwindow = (is_pushed) => {
+        console.log(is_pushed);
+        if (is_pushed) {
+            return <FloatWindow />
+        }
+    };
+    return (
+        <div>
+            <form className={classes.root} noValidate autoComplete="off">
+                <TextField id="standard-basic" label="id" />
+            </form>
+            <Button variant="outlined" onClick={onclick_send}>Verification</Button>
+            {popup_floatwindow(is_pushed)}
+        </div>
+
+    );
 }
