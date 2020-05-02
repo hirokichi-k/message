@@ -30,11 +30,13 @@ class App extends Component{
 
   DoChange_Send = () => {
     this.setState({
-      is_send: true
+      is_send: true,
+      is_recieve:false
     });
   }
   DoChange_recieve = () => {
     this.setState({
+      is_send: false,
       is_recieve: true
     });
   }
@@ -52,7 +54,6 @@ class App extends Component{
         <h1>短文がすぐに送信できます！</h1>
         <button onClick={() => { this.DoChange_Send();}}>送信する</button>
         <button onClick={() => { this.DoChange_recieve(); }}>受信する</button>
-        <FloatWindow />
         <div>{this.RenderSendText()}</div>
       </div>
     )

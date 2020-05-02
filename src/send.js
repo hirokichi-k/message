@@ -34,7 +34,7 @@ export default function RecieveBox() {
     return (
         <div>
             <form className={classes.root} noValidate autoComplete="off">
-                <TextField id="standard-basic" label="id" />
+                <TextField id="standard-basic" label="送信したいテキストを入力してください" />
             </form>
             <Button variant="outlined" onClick={onclick_send}>Verification</Button>
             {popup_floatwindow(is_pushed)}
