@@ -1,24 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>短文がすぐに送信できます！</h1>
+      <button onClick={() => {console.log('ひつじ仙人')}}>送信する</button>
+      <button onClick={() => {console.log('にんじゃわんこ')}}>受信する</button>
     </div>
   );
 }
