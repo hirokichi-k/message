@@ -36,6 +36,7 @@ export default function RecieveBox() {
     const [do_request, setRequest] = React.useState(true);
     const handleClose = () => {
         setOpen(false);
+        setPush(false);
     };
     const handleId = (event) => {
         setid(event.target.value);

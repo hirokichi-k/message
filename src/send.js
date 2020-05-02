@@ -34,6 +34,7 @@ export default function RecieveBox() {
     const [id_float, setid] = React.useState("400 Bad Request");
     const handleClose = () => {
         setOpen(false);
+        setPush(false);
     };
 
     const URL = "http://34.83.242.238";
